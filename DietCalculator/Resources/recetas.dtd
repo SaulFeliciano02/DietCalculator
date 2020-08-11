@@ -5,5 +5,7 @@
 <!ELEMENT ingrediente (nombre, calorias, grasas)>
 <!ELEMENT calorias (#PCDATA)>
 <!ELEMENT grasas (#PCDATA)>
-<!ELEMENT herramientas (herramienta*)>
-<!ELEMENT procedimiento (#PCDATA)>
+<!ELEMENT herramientas (herramienta+)>
+<!ELEMENT herramienta (#PCDATA)>
+<!ELEMENT procedimiento (paso+)>
+<!ELEMENT paso (#PCDATA)>
