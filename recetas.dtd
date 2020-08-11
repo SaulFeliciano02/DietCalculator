@@ -1,0 +1,9 @@
+<!ELEMENT recetas (receta+)>
+<!ELEMENT receta (nombre, ingredientes, herramientas, procedimiento)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ingredientes (ingrediente+)>
+<!ELEMENT ingrediente (nombre, calorias, grasas)>
+<!ELEMENT calorias (#PCDATA)>
+<!ELEMENT grasas (#PCDATA)>
+<!ELEMENT herramientas (herramienta*)>
+<!ELEMENT procedimiento (#PCDATA)>

@@ -1,20 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE recetas SYSTEM "recetas.dtd">
 <recetas>
     <receta>
         <nombre>Receta 1</nombre>
         <ingredientes>
+            <ingrediente>
+                <nombre>Ingrediente 1</nombre>
+                <calorias>100</calorias>
+                <grasas>100</grasas>
+            </ingrediente>
         </ingredientes>
-        <herramientas>
-        </herramientas>
-        <procedimiento>
-        </procedimiento>
+        <herramientas></herramientas>
+        <procedimiento></procedimiento>
     </receta>
     <receta>
         <nombre>Receta 2</nombre>
         <ingredientes>
+            <ingrediente>
+                <nombre>Ingrediente 2</nombre>
+                <calorias>80</calorias>
+                <grasas>80</grasas>
+            </ingrediente>
         </ingredientes>
-        <herramientas>
-        </herramientas>
-        <procedimiento>
-        </procedimiento>
+        <herramientas></herramientas>
+        <procedimiento></procedimiento>
     </receta>
 </recetas>
