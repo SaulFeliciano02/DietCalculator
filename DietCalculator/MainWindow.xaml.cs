@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace DietCalculator
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnOpenXml_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Archivos XML (*.xml)|*.xml";
+            if (openFileDialog.ShowDialog().GetValueOrDefault())
+            {
+                LabelXml.Content = openFileDialog.SafeFileName;
+            }
+        }
+
+        private void BtnOpenDtd_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Archivos DTD (*.dtd)|*.dtd";
+            if (openFileDialog.ShowDialog().GetValueOrDefault())
+            {
+                LabelDtd.Content = openFileDialog.SafeFileName;
+            }
         }
     }
 }

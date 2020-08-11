@@ -1,0 +1,20 @@
+<recetas>
+    <receta>
+        <nombre>Receta 1</nombre>
+        <ingredientes>
+        </ingredientes>
+        <herramientas>
+        </herramientas>
+        <procedimiento>
+        </procedimiento>
+    </receta>
+    <receta>
+        <nombre>Receta 2</nombre>
+        <ingredientes>
+        </ingredientes>
+        <herramientas>
+        </herramientas>
+        <procedimiento>
+        </procedimiento>
+    </receta>
+</recetas>

@@ -3,10 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DietCalculator"
+        xmlns:local="clr-namespace:DietCalculator" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="300" Width="300">
+    <materialDesign:ColorZone HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid>
+            <StackPanel Margin="16">
+                <StackPanel>
+                    <Button x:Name="BtnOpenXml" Click="BtnOpenXml_Click">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="File" Margin="0 0 5 0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Abrir XML"/>
+                        </StackPanel>
+                    </Button>
+                    <Label x:Name="LabelXml" Content="" HorizontalAlignment="Stretch" Margin="0 5 0 0" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="BtnOpenDtd" Margin="0 5 0 0" Click="BtnOpenDtd_Click">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="File" Margin="0 1.5 5 0"/>
+                            <TextBlock Text="Abrir DTD"/>
+                        </StackPanel>
+                    </Button>
+                    <Label x:Name="LabelDtd" Content="" HorizontalAlignment="Stretch" Margin="0 5 0 0" HorizontalContentAlignment="Center"/>
+                    <Button Margin="0 5 0 0">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="ArrowRight" Margin="0 0 5 0" VerticalAlignment="Stretch"/>
+                            <TextBlock Text="Continuar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Label x:Name="label2" Content="©2020 ISC" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="0 16 0 0"/>
+            </StackPanel>
+        </Grid>
+    </materialDesign:ColorZone>
 </Window>
