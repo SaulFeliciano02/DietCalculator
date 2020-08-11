@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DietCalculator.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="DietCalculator.Windows.InfoWindow"
+        mc:Ignorable="d"
+        Title="Información General" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <materialDesign:ColorZone HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid>
+            <StackPanel Margin="16">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Recetas:" FontWeight="Bold" Width="100" FontSize="14"/>
+                    <Label x:Name="LblRecipesCount" Content="000" HorizontalAlignment="Stretch" Width="30" HorizontalContentAlignment="Right" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ingredientes:" FontWeight="Bold" Width="100" FontSize="14"/>
+                    <Label x:Name="LblIngredientsCount" Content="000" HorizontalAlignment="Stretch" Width="30" HorizontalContentAlignment="Right" FontSize="14"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Herramientas:" FontWeight="Bold" Width="100" FontSize="14"/>
+                    <Label x:Name="LblToolsCount" Content="000" HorizontalAlignment="Stretch" Width="30" HorizontalContentAlignment="Right" FontSize="14"/>
+                </StackPanel>
+                <StackPanel>
+                    <Button x:Name="BtnProlog" Margin="0 32 0 0" Click="BtnProlog_Click">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="Assignment" Margin="0 0 5 0" VerticalAlignment="Stretch"/>
+                            <TextBlock Text="Consultas"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtnScheme" Margin="0 16 0 0" Click="BtnScheme_Click">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <materialDesign:PackIcon Kind="Calculator" Margin="0 0 5 0" VerticalAlignment="Stretch"/>
+                            <TextBlock Text="Cálculos"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </materialDesign:ColorZone>
+</Window>

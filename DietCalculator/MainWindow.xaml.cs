@@ -1,21 +1,10 @@
 ﻿using DietCalculator.Logic;
-using IronScheme;
+using DietCalculator.Windows;
 using Microsoft.Win32;
-using Prolog;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Xml;
 using System.Xml.Schema;
 
@@ -41,7 +30,17 @@ namespace DietCalculator
             if (openFileDialog.ShowDialog().GetValueOrDefault())
             {
                 LabelXml.Content = openFileDialog.SafeFileName;
-                MainController.Instance.XmlPath = openFileDialog.FileName;
+
+                try
+                {
+                    MainController.Instance.GetXmlData(openFileDialog.FileName);
+                    BtnOpenDtd.IsEnabled = true;
+                    BtnContinue.IsEnabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
             }
         }
 
@@ -52,21 +51,22 @@ namespace DietCalculator
 
             MainController.Instance.IsValid = true;
 
-            var xmlResolver = new XmlUrlResolver();
-            var settings = new XmlReaderSettings();
-            settings.ValidationEventHandler += new ValidationEventHandler(XmlValidationCallBack);
-            settings.ValidationType = ValidationType.DTD;
-            settings.IgnoreWhitespace = true;
-            settings.DtdProcessing = DtdProcessing.Parse;
-            settings.XmlResolver = xmlResolver;
-
-            XmlReader reader = XmlReader.Create(MainController.Instance.XmlPath, settings);
-
-            while (reader.Read()) ;
-
             if (MainController.Instance.IsValid)
             {
+                try
+                {
+                    //MainController.Instance.Recetas = MainController.XmlToObject<List<Receta>>();
 
+                    var infoWindow = new InfoWindow();
+                    infoWindow.Show();
+                    Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Error al obtener los datos del archivo XML");
+                    BtnContinue.IsEnabled = true;
+                    BtnOpenXml.IsEnabled = true;
+                }
             }
         }
 
@@ -81,6 +81,28 @@ namespace DietCalculator
             BtnOpenXml.IsEnabled = true;
 
             MainController.Instance.IsValid = false;
+        }
+
+        private void BtnOpenDtd_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Archivos DTD (*.dtd)|*.dtd"
+            };
+
+            if (openFileDialog.ShowDialog().GetValueOrDefault())
+            {
+                LabelDtd.Content = openFileDialog.SafeFileName;
+
+                try
+                {
+                    MainController.Instance.GetDtdData(openFileDialog.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
+            }
         }
     }
 }

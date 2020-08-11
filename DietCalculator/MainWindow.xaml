@@ -5,25 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DietCalculator" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="300">
+        Title="Calculadora de Dietas" Height="300" Width="300" WindowStartupLocation="CenterScreen">
     <materialDesign:ColorZone HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid>
             <StackPanel Margin="16">
-                <StackPanel>
-                    <Button x:Name="BtnOpenXml" Click="BtnOpenXml_Click">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <materialDesign:PackIcon Kind="File" Margin="0 0 5 0" VerticalAlignment="Center"/>
-                            <TextBlock Text="Abrir XML"/>
-                        </StackPanel>
-                    </Button>
-                    <Label x:Name="LabelXml" Content="" HorizontalAlignment="Stretch" Margin="0 5 0 0" HorizontalContentAlignment="Center"/>
-                    <Button x:Name="BtnContinue" Margin="0 5 0 0" Click="BtnContinue_Click">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <materialDesign:PackIcon Kind="ArrowRight" Margin="0 0 5 0" VerticalAlignment="Stretch"/>
-                            <TextBlock Text="Continuar"/>
-                        </StackPanel>
-                    </Button>
-                </StackPanel>
+                <Button x:Name="BtnOpenXml" Click="BtnOpenXml_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="File" Margin="0 0 5 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Abrir XML"/>
+                    </StackPanel>
+                </Button>
+                <Label x:Name="LabelXml" Content="" HorizontalAlignment="Stretch" Margin="0 10 0 0" HorizontalContentAlignment="Center"/>
+                <Button x:Name="BtnOpenDtd" Click="BtnOpenDtd_Click" IsEnabled="False" Margin="0 10 0 0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="File" Margin="0 0 5 0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Abrir DTD"/>
+                    </StackPanel>
+                </Button>
+                <Label x:Name="LabelDtd" Content="" HorizontalAlignment="Stretch" Margin="0 10 0 0" HorizontalContentAlignment="Center"/>
+                <Button x:Name="BtnContinue" Margin="0 10 0 0" Click="BtnContinue_Click" IsEnabled="False">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <materialDesign:PackIcon Kind="ArrowRight" Margin="0 0 5 0" VerticalAlignment="Stretch"/>
+                        <TextBlock Text="Continuar"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
     </materialDesign:ColorZone>
