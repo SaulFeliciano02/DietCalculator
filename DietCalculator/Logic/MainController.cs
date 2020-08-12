@@ -1,4 +1,4 @@
-﻿using Prolog;
+﻿using SbsSW.SwiPlCs;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,9 +15,9 @@ namespace DietCalculator.Logic
         public string XmlContent { get; set; }
         public string DtdContent { get; set; }
         public bool IsValid { get; set; } = true;
-        public List<Receta> Recetas { get; set; } = new List<Receta>();
 
-        private PrologEngine _prologEngine = new PrologEngine(persistentCommandHistory: false);
+        [XmlElement("recetas")]
+        public List<Receta> recetas = new List<Receta>();
 
         private MainController()
         {
@@ -38,7 +38,7 @@ namespace DietCalculator.Logic
         public void GetXmlData(string path)
         {
             XmlContent = File.ReadAllText(path);
-            Recetas = XmlToObject(XmlContent);
+            recetas = XmlToObject(XmlContent);
             InitializeProlog();
         }
 
@@ -46,9 +46,9 @@ namespace DietCalculator.Logic
         {
             (int, int, int) tuple = (0, 0, 0);
 
-            tuple.Item1 = Recetas.Count;
-            tuple.Item2 = Recetas.Select(x => x.Ingredientes.Select(y => y.Nombre)).Distinct().ToList().Count;
-            tuple.Item3 = Recetas.Select(x => x.Herramientas).Distinct().ToList().Count;
+            tuple.Item1 = recetas.Count;
+            tuple.Item2 = recetas.Select(x => x.ingredientes.Select(y => y.nombre)).Distinct().ToList().Count;
+            tuple.Item3 = recetas.Select(x => x.herramientas).Distinct().ToList().Count;
 
             return tuple;
         }
@@ -60,12 +60,42 @@ namespace DietCalculator.Logic
 
         private void InitializeProlog()
         {
-            _prologEngine.Consult($"{AppDomain.CurrentDomain.BaseDirectory.Replace("\\", "/")}Resources/recetas.pl");
-
-            foreach (var receta in Recetas)
+            try
             {
-                _prologEngine.GetFirstSolution($"asserta(ingredientes({receta.Nombre},[{string.Join(',', receta.Ingredientes.Select(x => x.Nombre).ToList())}])).");
-                _prologEngine.GetFirstSolution($"asserta(herramientas({receta.Nombre},[{string.Join(',', receta.Herramientas)}])).");
+                // Environment Variables
+                Environment.SetEnvironmentVariable("SWI_HOME_DIR", @"C:\\Program Files (x86)\\swipl");
+                Environment.SetEnvironmentVariable("Path", @"C:\\Program Files (x86)\\swipl\\bin");
+                string[] p = { "-q", "-f", Path.GetFullPath("Resources\\recetas.pl").Replace('\\', '/') };
+
+                // Connect to Prolog Engine
+                PlEngine.Initialize(p);
+
+                PlQuery load = new PlQuery($"cargar('{Path.GetFullPath("Resources\\recetas.pl").Replace('\\', '/')}')");
+                load.NextSolution();
+
+                foreach (var receta in recetas)
+                {
+                    PlQuery q = new PlQuery($"asserta(ingredientes({receta.nombre},[{string.Join(',', receta.ingredientes.Select(x => x.nombre).ToList())}]))");
+                    q.NextSolution();
+
+                    q = new PlQuery($"asserta(herramientas({receta.nombre},[{string.Join(',', receta.herramientas)}]))");
+                    q.NextSolution();
+                }
+
+                //PlQuery test = new PlQuery("poseeUnIngrediente(leche,X)");
+                //MessageBox.Show(test.SolutionVariables.ToList().Count.ToString());
+
+                //foreach (PlQueryVariables x in test.SolutionVariables)
+                //{
+                //    MessageBox.Show(x["X"].ToString());
+                //}
+
+                // Close Prolog Connection
+                //PlEngine.PlCleanup();
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error: Could not connect to Prolog Engine");
             }
         }
 

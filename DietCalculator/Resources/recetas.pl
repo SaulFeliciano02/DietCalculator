@@ -8,6 +8,8 @@
 % herramientas(bizcocho_vainilla,[agregar,mezclar,batir,hornear]).
 % herramientas(pizza,[mezclar,batir,mezclar_aceite,amazar,reposar,dar_forma,preparar,hornear]).
 
+cargar(A):-exists_file(A),consult(A).
+
 existe(X,[X|_]).
 existe(X,[_|Cola]):-existe(X,Cola).
 
