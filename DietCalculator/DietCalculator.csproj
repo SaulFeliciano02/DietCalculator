@@ -23,4 +23,8 @@
     </Content>  
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\recetas-16.xml" />
+  </ItemGroup>
+
 </Project>

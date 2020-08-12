@@ -1,47 +1,257 @@
 <?xml version="1.0" encoding="utf-16"?>
 <recetas>
     <receta>
-        <nombre>TEST</nombre>
+        <nombre>cremaCatalana</nombre>
         <ingredientes>
             <ingrediente>
-                <nombre>ingrediente1</nombre>
-                <calorias>0</calorias>
+                <nombre>leche</nombre>
+                <calorias>42</calorias>
+                <grasas>1</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>huevo</nombre>
+                <calorias>52</calorias>
+                <grasas>0.2</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>harina</nombre>
+                <calorias>364</calorias>
+                <grasas>1</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>azucar</nombre>
+                <calorias>387</calorias>
                 <grasas>0</grasas>
             </ingrediente>
             <ingrediente>
-                <nombre>ingrediente2</nombre>
-                <calorias>0</calorias>
-                <grasas>0</grasas>
+                <nombre>canela</nombre>
+                <calorias>6</calorias>
+                <grasas>0.1</grasas>
             </ingrediente>
         </ingredientes>
         <herramientas>
-            <herramienta>herramienta1</herramienta>
+            <herramienta>microondas</herramienta>
+            <herramienta>batidora</herramienta>
         </herramientas>
         <procedimiento>
-            <paso>paso1</paso>
-            <paso>paso2</paso>
+            <paso>Este postre es tan sumamente sencillo que te parecerá imposible no haberlo conocido antes. En esencia una crema catalana es como una crema pastelera, pero destaca por el azúcar quemado que podemos preparar con las herramientas adecuadas.</paso>
+            <paso>Del medio de leche que necesitamos, colocamos un vaso y ponemos el resto en el bol apto para microondas.</paso>
+            <paso>En el bol que tenemos listo para el microondas le añadimos la piel de un limón o medio, si es muy grande y la rama de canela.</paso>
+            <paso>Ponemos la leche en el microondas a máxima potencia durante 4 minutos. Es importante que el bol tenga tapa o que no esté lleno para evitar que se nos salga la leche.</paso>
+            <paso>Por otro lado, ponemos en el vaso de leche que hemos separado la maicena para poder diluirla por completo y evitar que nos queden grumos.</paso>
+            <paso>Seguimos batiendo las yemas con el azúcar en un bol. Podemos usar las varillas eléctricas para que nos quede una crema mucho más suave.</paso>
+            <paso>A la mezcla de las yemas con el azúcar le añadimos la leche que tenemos con la maicena. Conseguiremos la base de esta crema increíble.</paso>
+            <paso>A continuación, retiramos la leche que tenemos en el microondas. Le quitamos la piel de limón y la rama de canela y la vamos integrando a esta mezcla.</paso>
+            <paso>Vamos mezclando poco a poco la leche caliente con el resto de los ingredientes. Conseguiremos casi una crema catalana perfecta.</paso>
+            <paso>Ponemos de nuevo en el microondas. Encendemos a máxima potencia en series de 2 Pasado este tiempo removemos la crema.</paso>
+            <paso>Repetimos la operación 2 minutos más, en total serán 4 minutos lo que nos costará tener la crema preparada.</paso>
+            <paso>Repartimos en vasitos individuales, tapamos con papel film y a la hora de servir quemamos el azúcar por encima.</paso>
         </procedimiento>
     </receta>
     <receta>
-        <nombre>TEST</nombre>
+        <nombre>granizadoDeCerezas</nombre>
         <ingredientes>
             <ingrediente>
-                <nombre>ingrediente1</nombre>
+                <nombre>agua</nombre>
                 <calorias>0</calorias>
                 <grasas>0</grasas>
             </ingrediente>
             <ingrediente>
-                <nombre>ingrediente2</nombre>
+                <nombre>azucar</nombre>
+                <calorias>387</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>cerezas</nombre>
+                <calorias>50</calorias>
+                <grasas>0.3</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>limon</nombre>
+                <calorias>29</calorias>
+                <grasas>0.3</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>sal</nombre>
                 <calorias>0</calorias>
                 <grasas>0</grasas>
             </ingrediente>
         </ingredientes>
         <herramientas>
-            <herramienta>herramienta2</herramienta>
+            <herramienta>estufa</herramienta>
+            <herramienta>batidora</herramienta>
         </herramientas>
         <procedimiento>
-            <paso>paso1</paso>
-            <paso>paso2</paso>
+            <paso>Lavar las cerezas, deshuesarlas y congelarlas.</paso>
+            <paso>Mientras tanto, calentar el agua con el azúcar, el zumo de limón y una pizca de sal.</paso>
+            <paso>Al llegar a ebullición, contar dos minutos, apagar y retirar del fuego. Dejar enfriar.</paso>
+            <paso>Cuando las cerezas estén congeladas, meterlas en el vaso de una batidora potente junto con el almíbar ya frío.</paso>
+            <paso>Triturar hasta obtener un puré cremoso de fruta.</paso>
+            <paso>Servir</paso>
         </procedimiento>
     </receta>
+    <receta>
+        <nombre>gelatinaDeTomate</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>tomate</nombre>
+                <calorias>18</calorias>
+                <grasas>200</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>limon</nombre>
+                <calorias>29</calorias>
+                <grasas>0.3</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>vinagre</nombre>
+                <calorias>18</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>gelatina</nombre>
+                <calorias>62</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>cebolla</nombre>
+                <calorias>40</calorias>
+                <grasas>0.1</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>ajo</nombre>
+                <calorias>149</calorias>
+                <grasas>0.5</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>sal</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>oregano</nombre>
+                <calorias>250</calorias>
+                <grasas>10</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>pimienta</nombre>
+                <calorias>251</calorias>
+                <grasas>3.3</grasas>
+            </ingrediente>
+        </ingredientes>
+        <herramientas>
+            <herramienta>batidora</herramienta>
+            <herramienta>estufa</herramienta>
+            <herramienta>refigerador</herramienta>
+        </herramientas>
+        <procedimiento>
+            <paso>Cortamos la cebolla en trozos medianos.</paso>
+            <paso>En el vaso de una batidora colocamos los tomates, la cebolla picada, el ajo, sal y pimienta al gusto. Batimos hasta que todos los ingredientes estén bien triturados. Luego agregamos el azúcar.</paso>
+            <paso>En una olla añadimos la mezcla de la batidora y cocinamos durante 15 minutos, revolviendo constantemente para evitar que se pegue.</paso>
+            <paso>Aparte, hidratamos la gelatina en agua bien fría durante 5 minutos.</paso>
+            <paso>Pasados los 15 minutos de cocción de la mezcla incluimos el vinagre, el jugo de limón, la gelatina y el orégano. Dejamos calentar unos segundos a fuego lento y lo apagamos.</paso>
+            <paso>Vaciamos la mezcla en unos moldes y metemos en la nevera. Dejamos enfriar durante 5 horas para que tome la consistencia deseada.</paso>
+        </procedimiento>
+    </receta>
+    <receta>
+        <nombre>pastelFrioPatataSalmonYEspinacas</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>huevo</nombre>
+                <calorias>52</calorias>
+                <grasas>0.2</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>espinacas</nombre>
+                <calorias>23</calorias>
+                <grasas>0.39</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>salmon</nombre>
+                <calorias>191</calorias>
+                <grasas>12</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>patatas</nombre>
+                <calorias>77</calorias>
+                <grasas>0.2</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>mantequilla</nombre>
+                <calorias>717</calorias>
+                <grasas>81</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>sal</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>pimienta</nombre>
+                <calorias>251</calorias>
+                <grasas>3.3</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>mayonesa</nombre>
+                <calorias>680</calorias>
+                <grasas>75</grasas>
+            </ingrediente>
+        </ingredientes>
+        <herramientas>
+            <herramienta>microondas</herramienta>
+            <herramienta>horno</herramienta>
+        </herramientas>
+        <procedimiento>
+            <paso>Para cocinar esta delicia nos ponemos manos a la obra con el puré de patata. Pelamos las patatas y las cortamos en trocitos.</paso>
+            <paso>Cocinamos las patatas con agua y un poco de sal o al microondas. En unos minutos deben estar listas.</paso>
+            <paso>Colocamos las patatas en un bol con unas 3 cucharadas de su cocción y la mantequilla. Trituramos hasta conseguir una fina masa.</paso>
+            <paso>Las espinacas pueden ser frescas o congeladas siempre nos quedarán perfectas, son un básico de toda cocina.</paso>
+            <paso>Trituramos hasta conseguir una masa. Sobre una fuente de horno ponemos papel vegetal para que no se pegue la masa.</paso>
+            <paso>Extendemos las lonchas de salmón ahumado hasta que esté perfectamente repartido en este pastel, es importante que no quede ningún hueco.</paso>
+        </procedimiento>
+    </receta>
+    <receta>
+        <nombre>mousseDeFresa</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>fresas</nombre>
+                <calorias>35</calorias>
+                <grasas>0.4</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>azucar</nombre>
+                <calorias>387</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>nata</nombre>
+                <calorias>196</calorias>
+                <grasas>19</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>gelatina</nombre>
+                <calorias>62</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>menta</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+        </ingredientes>
+        <herramientas>
+            <herramienta>refigerador</herramienta>
+            <herramienta>estufa</herramienta>
+            <herramienta>microondas</herramienta>
+        </herramientas>
+        <procedimiento>
+            <paso>Verter agua fría en un recipiente. Incorporar las láminas de gelatina y dejar hidratar durante 10-15 minutos.</paso>
+            <paso>Lavar y cortar las hojas de menta en trozos muy pequeños. Reservar.</paso>
+            <paso>Lavar muy bien las fresas con suficiente agua. Retirar el tallo y cortarlas en trozos pequeños.</paso>
+            <paso>Poner los trozos de fresas en una cacerola. Agregar un tercio de taza de azúcar. Calentar a fuego medio durante 10-15 minutos, triturando las fresas con ayuda de un tenedor. Retirar del fuego y reservar.</paso>
+            <paso>Poner las láminas de gelatina escurridas en un recipiente apto para microondas. Programar a 5 segundos, a baja potencia, hasta que esté líquida la gelatina.</paso>
+            <paso>Añadir a las fresas con gelatina, la nata montada y mezclar con cuidado.</paso>
+            <paso>Verter la mezcla de la mousse en vasitos individuales y refrigerar en la nevera durante, al menos, 4 horas.</paso>
+        </procedimiento>
+    </receta>   
 </recetas>
