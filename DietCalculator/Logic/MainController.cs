@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Prolog;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Windows;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -13,6 +16,8 @@ namespace DietCalculator.Logic
         public string DtdContent { get; set; }
         public bool IsValid { get; set; } = true;
         public List<Receta> Recetas { get; set; } = new List<Receta>();
+
+        private PrologEngine _prologEngine = new PrologEngine(persistentCommandHistory: false);
 
         private MainController()
         {
@@ -55,15 +60,13 @@ namespace DietCalculator.Logic
 
         private void InitializeProlog()
         {
-            //_prologEngine.Consult($"{AppDomain.CurrentDomain.BaseDirectory.Replace("\\", "/")}Resources/recetas.pl");
+            _prologEngine.Consult($"{AppDomain.CurrentDomain.BaseDirectory.Replace("\\", "/")}Resources/recetas.pl");
 
-            //foreach (var receta in Recetas)
-            //{
-            //    _prologEngine.GetFirstSolution($"asserta(ingredientes({receta.Nombre},[{string.Join(',', receta.Ingredientes.Select(x => x.Nombre).ToList())}])).");
-            //    _prologEngine.GetFirstSolution($"asserta(herramientas({receta.Nombre},[{string.Join(',', receta.Herramientas)}])).");
-            //}
-
-            //MessageBox.Show(_prologEngine.GetFirstSolution("ingredientes(sopa_de_cebolla, L).").ToString());
+            foreach (var receta in Recetas)
+            {
+                _prologEngine.GetFirstSolution($"asserta(ingredientes({receta.Nombre},[{string.Join(',', receta.Ingredientes.Select(x => x.Nombre).ToList())}])).");
+                _prologEngine.GetFirstSolution($"asserta(herramientas({receta.Nombre},[{string.Join(',', receta.Herramientas)}])).");
+            }
         }
 
         public static List<Receta> XmlToObject(string xml)
