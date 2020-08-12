@@ -8,8 +8,10 @@ namespace DietCalculator.Logic
     [XmlType("receta")]
     public class Receta
     {
+        [XmlElement("nombre")]
         public string Nombre { get; set; }
 
+        [XmlElement("ingredientes")]
         public List<Ingrediente> Ingredientes { get; set; } = new List<Ingrediente>();
 
         [XmlArrayItem("herramienta")]
