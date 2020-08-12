@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-16"?>
+<recetas>
+    <receta>
+        <nombre>TEST</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>ingrediente1</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>ingrediente2</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+        </ingredientes>
+        <herramientas>
+            <herramienta>herramienta1</herramienta>
+        </herramientas>
+        <procedimiento>
+            <paso>paso1</paso>
+            <paso>paso2</paso>
+        </procedimiento>
+    </receta>
+    <receta>
+        <nombre>TEST</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>ingrediente1</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+            <ingrediente>
+                <nombre>ingrediente2</nombre>
+                <calorias>0</calorias>
+                <grasas>0</grasas>
+            </ingrediente>
+        </ingredientes>
+        <herramientas>
+            <herramienta>herramienta2</herramienta>
+        </herramientas>
+        <procedimiento>
+            <paso>paso1</paso>
+            <paso>paso2</paso>
+        </procedimiento>
+    </receta>
+</recetas>
