@@ -1,13 +1,3 @@
-% % ingredientes
-% ingredientes(sopa_de_cebolla,[cebolla,caldo,agua]).
-% ingredientes(bizcocho_vainilla,[huevo,mantequilla,azucar,harina,vainilla]).
-% ingredientes(pizza,[harina,sal,agua,aceite,levadura]).
-
-% % herramientas
-% herramientas(sopa_de_cebolla,[pelar,cortar,hervir]).
-% herramientas(bizcocho_vainilla,[agregar,mezclar,batir,hornear]).
-% herramientas(pizza,[mezclar,batir,mezclar_aceite,amazar,reposar,dar_forma,preparar,hornear]).
-
 cargar(A):-exists_file(A),consult(A).
 
 existe(X,[X|_]).

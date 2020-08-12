@@ -30,18 +30,18 @@ namespace DietCalculator
 
             if (openFileDialog.ShowDialog().GetValueOrDefault())
             {
-                //try
-                //{
+                try
+                {
                     MainController.Instance.GetXmlData(openFileDialog.FileName);
                     BtnOpenDtd.IsEnabled = true;
                     BtnContinue.IsEnabled = true;
 
                     LabelXml.Content = openFileDialog.SafeFileName;
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show("ERROR: " + ex.Message);
-                //}
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
             }
         }
 

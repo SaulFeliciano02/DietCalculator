@@ -20,17 +20,25 @@ namespace DietCalculator.Windows
     {
         public InfoWindow()
         {
-            InitializeComponent();
-
-            var info = MainController.Instance.GetInfo();
-            LblRecipesCount.Content = info.Item1.ToString();
-            LblIngredientsCount.Content = info.Item2.ToString();
-            LblToolsCount.Content = info.Item3.ToString();
+            try
+            {
+                InitializeComponent();
+                var info = MainController.Instance.GetInfo();
+                LblRecipesCount.Content = info.Item1.ToString();
+                LblIngredientsCount.Content = info.Item2.ToString();
+                LblToolsCount.Content = info.Item3.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtnProlog_Click(object sender, RoutedEventArgs e)
         {
-
+            var window = new PrologWindow();
+            window.Show();
+            Close();
         }
 
         private void BtnScheme_Click(object sender, RoutedEventArgs e)
