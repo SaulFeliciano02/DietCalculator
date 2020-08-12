@@ -8,8 +8,8 @@ namespace DietCalculator.Logic
     [XmlType("ingrediente")]
     public class Ingrediente
     {
-        public string nombre;
-        public int calorias;
-        public int grasas;
+        public string Nombre { get; set; }
+        public int Calorias { get; set; }
+        public int Grasas { get; set; }
     }
 }
