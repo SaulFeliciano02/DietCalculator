@@ -1,5 +1,4 @@
-﻿using IronScheme.Scripting;
-using Prolog;
+﻿using Prolog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,7 +16,6 @@ namespace DietCalculator.Logic
         public string XmlContent { get; set; }
         public string DtdContent { get; set; }
         public bool IsValid { get; set; } = true;
-
         public List<Receta> Recetas { get; set; } = new List<Receta>();
 
         private MainController()
