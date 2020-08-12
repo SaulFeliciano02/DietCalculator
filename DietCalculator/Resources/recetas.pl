@@ -6,6 +6,11 @@ existe(X,[_|Cola]):-existe(X,Cola).
 existeEnLista([],_).
 existeEnLista([H|T],L) :- existeEnLista(T,L), existe(H,L).
 
+sonParteDeReceta(List1,Resultado) :-
+    ingredientes(Resultado,List2),
+    forall(member(Element,List1),
+           member(Element,List2)).
+
 noExisteEnLista([],_).
 noExisteEnLista([H|T],L) :- noExisteEnLista(T,L), not(existe(H,L)).
 
